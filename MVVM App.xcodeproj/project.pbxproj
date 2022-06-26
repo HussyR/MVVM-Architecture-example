@@ -13,6 +13,10 @@
 		835D20A52868511A00E49F9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 835D20A32868511A00E49F9C /* Main.storyboard */; };
 		835D20A72868511E00E49F9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 835D20A62868511E00E49F9C /* Assets.xcassets */; };
 		835D20AA2868511E00E49F9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 835D20A82868511E00E49F9C /* LaunchScreen.storyboard */; };
+		835D20B62868564000E49F9C /* ViewData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D20B52868564000E49F9C /* ViewData.swift */; };
+		835D20BA2868570300E49F9C /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D20B92868570300E49F9C /* MainViewModel.swift */; };
+		835D20BC286859A500E49F9C /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D20BB286859A500E49F9C /* TestView.swift */; };
+		835D20BE286859CA00E49F9C /* TestView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D20BD286859CA00E49F9C /* TestView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,10 @@
 		835D20A62868511E00E49F9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		835D20A92868511E00E49F9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		835D20AB2868511E00E49F9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		835D20B52868564000E49F9C /* ViewData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewData.swift; sourceTree = "<group>"; };
+		835D20B92868570300E49F9C /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		835D20BB286859A500E49F9C /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		835D20BD286859CA00E49F9C /* TestView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TestView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +66,49 @@
 			children = (
 				835D209D2868511A00E49F9C /* AppDelegate.swift */,
 				835D209F2868511A00E49F9C /* SceneDelegate.swift */,
-				835D20A12868511A00E49F9C /* ViewController.swift */,
+				835D20B22868560500E49F9C /* MainModule */,
 				835D20A32868511A00E49F9C /* Main.storyboard */,
 				835D20A62868511E00E49F9C /* Assets.xcassets */,
 				835D20A82868511E00E49F9C /* LaunchScreen.storyboard */,
 				835D20AB2868511E00E49F9C /* Info.plist */,
 			);
 			path = "MVVM App";
+			sourceTree = "<group>";
+		};
+		835D20B1286855FE00E49F9C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				835D20A12868511A00E49F9C /* ViewController.swift */,
+				835D20BB286859A500E49F9C /* TestView.swift */,
+				835D20BD286859CA00E49F9C /* TestView+Extension.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		835D20B22868560500E49F9C /* MainModule */ = {
+			isa = PBXGroup;
+			children = (
+				835D20B42868563500E49F9C /* Model */,
+				835D20B32868560D00E49F9C /* ViewModel */,
+				835D20B1286855FE00E49F9C /* View */,
+			);
+			path = MainModule;
+			sourceTree = "<group>";
+		};
+		835D20B32868560D00E49F9C /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				835D20B92868570300E49F9C /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		835D20B42868563500E49F9C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				835D20B52868564000E49F9C /* ViewData.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,8 +182,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				835D20BA2868570300E49F9C /* MainViewModel.swift in Sources */,
 				835D20A22868511A00E49F9C /* ViewController.swift in Sources */,
+				835D20BC286859A500E49F9C /* TestView.swift in Sources */,
 				835D209E2868511A00E49F9C /* AppDelegate.swift in Sources */,
+				835D20BE286859CA00E49F9C /* TestView+Extension.swift in Sources */,
+				835D20B62868564000E49F9C /* ViewData.swift in Sources */,
 				835D20A02868511A00E49F9C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
